@@ -177,4 +177,61 @@ body{
     height: 100vh;
     width: 100%;
     background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0vw 10vw;
+    padding-bottom: 3vw;
+    border-top: 1px solid #333;
+}
+
+.left{
+    height: 100%;
+    width: 40%;
+    /* background-color: #333; */
+    padding: 3vw 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.left p{
+    font-size: 0.9vw;
+    font-weight: 400;
+}
+.left h5{
+    font-size: 1.1vw;
+    font-weight: 300;
+    width: 75%;
+}
+.right{
+    height: 100%;
+    width: 50%;
+    /* background-color: #333; */
+    position: relative;
+}
+
+.right .right-elem h4{
+    font-size: 1.2vw;
+    font-weight: 400;
+    width: 85%;
+}
+
+.right-elem{
+    position: relative;
+    padding-top: 3vw;
+    padding-bottom: 7vw;
+    /* background-color: red; */
+    border-bottom: 1px solid #333;
+}
+
+.right-elem img{
+    width: 7vw;
+    height: 7vw;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    scale: 0;
 }

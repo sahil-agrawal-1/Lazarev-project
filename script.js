@@ -1,4 +1,5 @@
-let Nav = document.querySelector(".nav");
+function navAnimation(){
+    let Nav = document.querySelector(".nav");
 
 Nav.addEventListener("mouseenter", function(){
 const tl = gsap.timeline();
@@ -32,5 +33,34 @@ Nav.addEventListener("mouseleave", function(){
     tl.to(".nav-bottom",{
         height: "0vh",
         duration: 0.2,
+    })
+})
+}
+
+// navAnimation();
+
+let relem = document.querySelectorAll(".right-elem")
+let relemImg = document.querySelectorAll(".right-elem img")
+
+relem.forEach(function (elems){
+    elems.addEventListener("mouseenter", function(newelems){
+       gsap.to(elems.childNodes[3], {
+            opacity: 1,
+            scale: 1
+        });
+    })
+
+    elems.addEventListener("mouseleave", function(newelems){
+       gsap.to(elems.childNodes[3], {
+            opacity: 0,
+            scale: 0
+        });
+    })
+
+    elems.addEventListener("mousemove", function(dets){
+        gsap.to(elems.childNodes[3], {
+            x: dets.x - elems.getBoundingClientRect().x - 10,
+            y: dets.y - elems.getBoundingClientRect().y - 90
+        });
     })
 })
