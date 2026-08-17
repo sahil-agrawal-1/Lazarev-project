@@ -39,8 +39,6 @@ function navAnimation() {
   });
 }
 
-navAnimation();
-
 function page2Animation() {
   let relem = document.querySelectorAll(".right-elem");
   let relemImg = document.querySelectorAll(".right-elem img");
@@ -69,4 +67,5 @@ function page2Animation() {
   });
 }
 
+navAnimation();
 page2Animation();
